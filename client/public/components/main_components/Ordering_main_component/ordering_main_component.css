@@ -1,0 +1,20 @@
+.orderbox-parent {
+  display: flex;
+  background-color: black;
+  opacity: 100%;
+  width: 150vh;
+  height: auto;
+  position: relative;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 5rem;
+}
+
+@media (max-width: 360px) {
+  .orderbox-parent {
+    flex-direction: column;
+    width: 55vh;
+    height: auto;
+    /* max-height: 20vh; */
+  }
+}

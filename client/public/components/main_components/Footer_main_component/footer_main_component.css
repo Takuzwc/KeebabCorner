@@ -1,0 +1,176 @@
+.footer-parent {
+  display: flex;
+  background-color: black;
+  opacity: 100%;
+  width: 150vh;
+  height: auto;
+  position: relative;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.footerlogo-section {
+  width: 35%;
+  height: 35vh;
+}
+.footerDiscreption-section {
+  display: flex;
+  flex-wrap: wrap;
+  width: 75%;
+  height: auto;
+  background: rgba(0, 0, 0, 0.5)
+    url(../../../../src/assets/images/footerImage.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: darken;
+  justify-content: space-around;
+  border-radius: 5px;
+}
+.footer-wording {
+  width: 100%;
+  height: 20vh;
+  font-size: 18px;
+}
+.footer-pages {
+  justify-content: space-around;
+  margin-bottom: 12px;
+}
+.footer-pages ul {
+  width: 100%;
+  max-height: 30px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style: none;
+  align-items: center;
+  padding: 0;
+  gap: 10px;
+}
+.btns-links {
+  width: 120px;
+  height: 30px;
+  background-color: transparent;
+  text-align: center;
+  font-size: 14px;
+  align-self: center;
+  border-radius: 30px;
+  color: #ffffff;
+}
+.btns-links:hover {
+  color: #ff0000;
+  border-bottom: 2px solid #ff0000;
+}
+.payment-types {
+  width: 95%;
+  max-height: 7vh;
+}
+.paymentMethods {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  margin: 10px;
+  gap: 5px;
+}
+.btns-pay {
+  width: 110px;
+  height: 30px;
+  border-radius: 10px;
+}
+
+@media all and (max-width: 360px) {
+  .footer-parent {
+    display: flex;
+    background-color: black;
+    flex-direction: column;
+    opacity: 100%;
+    width: 55vh;
+    height: auto;
+    position: relative;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  .footerlogo-section {
+    display: flex;
+    width: 38%;
+    height: 16vh;
+  }
+  .footerDiscreption-section {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 45vh;
+    max-height: 45vh;
+    background: rgba(0, 0, 0, 0.5)
+      url('/Users/Taku/Documents/git_Workspace/KeebabCorner/src/assets/images/footerImage.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: darken;
+    justify-content: center;
+    align-content: center;
+    border-radius: 5px;
+    gap: 20px;
+  }
+  .footer-wording {
+    display: flex;
+    flex-wrap: wrap;
+    width: 95%;
+    height: 18vh;
+  }
+  .footer-pages {
+    display: flex;
+    flex-wrap: wrap;
+    width: 95%;
+    height: 7vh;
+    justify-content: space-around;
+    margin-bottom: 0px;
+    margin-top: 10px;
+  }
+  .footer-pages li {
+    margin-top: 28px;
+    margin-left: 18px;
+  }
+  .footer-pages ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
+    align-items: center;
+    padding: 0;
+    gap: 10px;
+  }
+  .footer-wording {
+    font-size: 14px;
+  }
+  .btns-links {
+    width: 120px;
+    height: 30px;
+    background-color: transparent;
+    text-align: center;
+    font-size: 12px;
+    align-self: center;
+    border-radius: 30px;
+    color: #ffffff;
+  }
+  .btns-links:hover {
+    color: #ff0000;
+    border-bottom: 2px solid #ff0000;
+  }
+  .btns-pay {
+    width: 65px;
+    height: 25px;
+    border-radius: 10px;
+  }
+  .payment-types {
+    width: 95%;
+    max-height: 7vh;
+  }
+  .paymentMethods {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    gap: 5px;
+  }
+}

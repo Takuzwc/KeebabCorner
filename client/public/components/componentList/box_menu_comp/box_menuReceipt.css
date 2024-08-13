@@ -1,0 +1,115 @@
+.receipt-table {
+  width: 100vh;
+  background-color: #271c18;
+  max-height: 50vh;
+  border-collapse: collapse;
+  border-radius: 15px;
+}
+.receipt-table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  color: white;
+}
+th,
+td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+.receipt-table tr:hover {
+  background-color: #6ca637;
+}
+.btn-checkout {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 130px;
+  height: 40px;
+  border-radius: 30px;
+  background-color: #6ca637;
+  border: #ffffff solid 1px;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 13px;
+}
+.btn-checkout:hover {
+  background: linear-gradient(to Top right, #ff0000, #0b0a07);
+  font-size: 16px;
+  width: 130px;
+}
+.payment-form {
+  width: 30%;
+  /* background-color: red; */
+  height: 65vh;
+}
+.sum-total {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  width: 80%;
+  height: 80px;
+}
+.sum-total .cart-icon {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+.paymentform-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  height: 100%;
+}
+.form-children {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+.paymentform-group input {
+  width: 200px;
+  height: 35px;
+  border-radius: 12px;
+  border: none;
+  background-color: #ffffff;
+}
+.select-sauce-section {
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  margin: 5px;
+  border-radius: 10px;
+}
+.select-meat-section {
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  margin: 5px;
+  border-radius: 10px;
+}
+.select-sauce-section:hover {
+  border: #6ca637 1px solid;
+}
+.select-meat-section:hover {
+  border: #6ca637 1px solid;
+}
+.choices {
+  color: red;
+}
+@media all and (max-width: 360px) {
+  .receipt-table {
+    width: 50vh;
+    max-height: 50vh;
+    border-collapse: collapse;
+    border-radius: 15px;
+  }
+  .payment-form {
+    width: 100%;
+    height: 75vh;
+    margin-top: 20px;
+  }
+}
