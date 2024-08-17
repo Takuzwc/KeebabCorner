@@ -25,6 +25,7 @@
   background-blend-mode: darken;
   justify-content: space-around;
   border-radius: 5px;
+  color: #ffffff;
 }
 .footer-wording {
   width: 100%;
@@ -79,7 +80,7 @@
   border-radius: 10px;
 }
 
-@media all and (max-width: 360px) {
+@media all and (max-width: 550px) {
   .footer-parent {
     display: flex;
     background-color: black;
@@ -103,7 +104,7 @@
     height: 45vh;
     max-height: 45vh;
     background: rgba(0, 0, 0, 0.5)
-      url('/Users/Taku/Documents/git_Workspace/KeebabCorner/src/assets/images/footerImage.png');
+      url('../../../../src/assets/images/footerImage.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-blend-mode: darken;

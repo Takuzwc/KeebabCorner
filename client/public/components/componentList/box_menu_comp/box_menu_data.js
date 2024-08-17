@@ -10,7 +10,7 @@ export const cards = [
   {
     id: 2,
     value: 'medium',
-    name: 'LARGE',
+    name: 'MEDIUM',
     description: 'large portion of keebab',
     cost: 1.95,
     imageId: 'Clargek1',
@@ -18,7 +18,7 @@ export const cards = [
   {
     id: 3,
     value: 'large',
-    name: 'EXTRA LARGE',
+    name: 'LARGE',
     description: 'extra large portion of keebab',
     cost: 2.3,
     imageId: 'Cextralargek1',
@@ -30,7 +30,7 @@ export const meatTypes = [
     id: 1,
     name: 'CHICKEN',
     description: 'type of meat chicken weighed per kilogram',
-    cost: 1.5,
+    cost: 1.7,
     imageId: 'Csmallk1',
   },
   {

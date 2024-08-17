@@ -159,6 +159,10 @@ body {
   background-color: rgba(45, 75, 8, 0.4);
   border-radius: 30px;
   border: 1px solid #ffffff;
+  color: #ffffff;
+}
+.home-sms-btn a {
+  color: #ffffff;
 }
 .home-sms-btn:hover {
   background: linear-gradient(to Top right, #ff0000, #0b0a07);
@@ -168,7 +172,7 @@ body {
 .homeBtn-right {
   margin-left: 10px;
 }
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 550px) {
   .nav-parent {
     display: flex;
     flex-wrap: nowrap;

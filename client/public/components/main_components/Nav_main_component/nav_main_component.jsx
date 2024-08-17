@@ -50,8 +50,8 @@ export class Nav_main_component extends Component {
             TASTY PRODUCT, CHEERS, SMACZNEGO
           </p>
           <div className="home-btns">
-            <button className="home-sms-btn homeBtn-left" href="/about">
-              About Us
+            <button className="home-sms-btn homeBtn-left">
+              <a href="/about">About Us</a>
             </button>
             <button className="home-sms-btn homeBtn-right">
               See Menu

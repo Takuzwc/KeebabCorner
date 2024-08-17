@@ -29,7 +29,7 @@
 .menu-title {
   color: #ffffff;
 }
-@media all and (max-width: 360px) {
+@media all and (max-width: 550px) {
   .menu-parent {
     flex-direction: column;
     width: 100%;

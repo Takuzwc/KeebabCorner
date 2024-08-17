@@ -10,10 +10,11 @@
   margin-bottom: 5rem;
 }
 
-@media (max-width: 360px) {
+@media (max-width: 550px) {
   .orderbox-parent {
     flex-direction: column;
     width: 55vh;
+    align-content: center;
     height: auto;
     /* max-height: 20vh; */
   }
