@@ -1,4 +1,4 @@
-import { Component, useState } from 'react';
+import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus, faMinus } from '@fortawesome/free-solid-svg-icons';
 import PropTypes from 'prop-types';
@@ -6,6 +6,11 @@ import './box_menu.css';
 import './boxMenuSize_section.css';
 import Boxfood from '/Users/Taku/Documents/git_Workspace/KeebabCorner/client/src/assets/images/box_food_img.png';
 import './box_menuReceipt.css';
+import {
+  cards,
+  meatTypes,
+  sauceTypes,
+} from 'client/public/components/componentList/box_menu_comp/box_menu_data.js';
 
 KebabCard.propTypes = {
   kebab: PropTypes.shape({
@@ -112,3 +117,8 @@ export function KebabCard({ kebab, index, onUpdate }) {
     </div>
   );
 }
+
+export const suaceTargetValue = () => {
+  if (sauceTypes.sauce.name === KebabCard.handleSauceChange)
+    return sauceTypes.cost;
+};
