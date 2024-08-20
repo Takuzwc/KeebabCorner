@@ -4,7 +4,7 @@ import './boxMenuSize_section.css';
 import './box_menuReceipt.css';
 import { KebabList } from './kebabList.jsx';
 import { PaymentForm } from './paymentForm.jsx';
-import { ReceiptTable } from './receiptTable.js';
+import { ReceiptTable } from './receiptTable.jsx';
 
 // ToggleMenuComponent Component
 export function ToggleMenuComponent() {

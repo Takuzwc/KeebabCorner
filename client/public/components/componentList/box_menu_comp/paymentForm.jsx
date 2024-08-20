@@ -12,7 +12,7 @@ export function PaymentForm({ onPayment }) {
       <h2>Payment</h2>
       <div className="sum-total">
         <FontAwesomeIcon className="cart-icon" icon={faCartShopping} />
-        <h3>$43.99</h3>
+        <h3>$Total</h3>
       </div>
 
       <form className="paymentform-group">

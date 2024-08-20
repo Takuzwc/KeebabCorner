@@ -86,11 +86,11 @@
     background-color: black;
     flex-direction: column;
     opacity: 100%;
-    width: 55vh;
+    width: 50vh;
     height: auto;
     position: relative;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 30px;
   }
   .footerlogo-section {
     display: flex;

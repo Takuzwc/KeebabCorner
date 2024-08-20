@@ -13,9 +13,12 @@
 @media (max-width: 550px) {
   .orderbox-parent {
     flex-direction: column;
-    width: 55vh;
+    width: 50vh;
+    align-self: center;
     align-content: center;
+
     height: auto;
+    border-radius: 30px;
     /* max-height: 20vh; */
   }
 }

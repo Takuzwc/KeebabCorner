@@ -28,26 +28,26 @@ export const cards = [
 export const meatTypes = [
   {
     id: 1,
-    name: 'CHICKEN',
+    name: 'chicken',
     description: 'type of meat chicken weighed per kilogram',
     cost: 1.7,
     imageId: 'Csmallk1',
   },
   {
     id: 2,
-    name: 'BEEF',
+    name: 'beef',
     description: 'type of meat beef weighed per kilogram',
     cost: 3.5,
   },
   {
     id: 3,
-    name: 'PORK',
+    name: 'lamb',
     description: 'type of meat pork weighed per kilogram',
     cost: 2.5,
   },
   {
     id: 4,
-    name: 'MIXED',
+    name: 'falafel',
     description: 'A mixture of types of meat weighed per kilogram',
     cost: 4.5,
   },
@@ -56,26 +56,26 @@ export const meatTypes = [
 export const sauceType = [
   {
     id: 1,
-    name: 'garlic sauce',
+    name: 'garlic',
     description: 'type of sauce is garlic',
     cost: 0.3,
     imageId: 'Csmallk1',
   },
   {
     id: 2,
-    name: 'sweet chilli',
+    name: 'yogurt',
     description: 'type of sauce is sweet chilli',
     cost: 0.45,
   },
   {
     id: 3,
-    name: 'hot sauce',
+    name: 'chili',
     description: 'type of sauce is hot sauce',
     cost: 0.4,
   },
   {
     id: 4,
-    name: 'mastard sauce',
+    name: 'tahini',
     description: 'type of sauce is mastard sauce',
     cost: 0.5,
   },

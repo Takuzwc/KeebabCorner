@@ -19,7 +19,7 @@ export function KebabList({ kebabs, onUpdate, addKebab }) {
           Large Kebab
         </button>
       </div>
-      <ul>
+      <ul className="list-cards">
         {kebabs.map((kebab, index) => (
           <li key={index}>
             <KebabCard kebab={kebab} index={index} onUpdate={onUpdate} />

@@ -176,10 +176,11 @@ body {
   .nav-parent {
     display: flex;
     flex-wrap: nowrap;
-    width: 55vh;
+    width: 50vh;
     height: auto;
     max-height: 55vh;
     justify-content: end;
+    border-radius: 30px;
   }
   .nav-bar {
     display: flex;

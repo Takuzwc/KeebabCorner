@@ -109,8 +109,8 @@ button:hover {
     background-position: cover;
     background-repeat: repeat;
     padding: 20px;
-    border-radius: 10px;
-    width: 55vh;
+    border-radius: 30px;
+    width: 50vh;
     margin: auto;
     margin-bottom: 2rem;
   }

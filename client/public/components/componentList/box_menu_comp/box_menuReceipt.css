@@ -106,7 +106,7 @@ td {
 }
 @media all and (max-width: 550px) {
   .receipt-table {
-    width: 50vh;
+    width: 45vh;
     max-height: 50vh;
     border-collapse: collapse;
     border-radius: 15px;
