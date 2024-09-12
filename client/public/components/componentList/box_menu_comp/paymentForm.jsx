@@ -1,5 +1,3 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 import PropTypes from 'prop-types';
 import './box_menu.css';
 import './boxMenuSize_section.css';
@@ -10,10 +8,6 @@ export function PaymentForm({ onPayment }) {
   return (
     <div className="payment-form">
       <h2>Payment</h2>
-      <div className="sum-total">
-        <FontAwesomeIcon className="cart-icon" icon={faCartShopping} />
-        <h3>$Total</h3>
-      </div>
 
       <form className="paymentform-group">
         <div className="form-children">

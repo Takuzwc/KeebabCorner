@@ -65,7 +65,10 @@ export function ReceiptTable({ orders, onCheckout }) {
           })}
           <tr>
             <td>-</td>
-            <td>Total</td>
+            <td>
+              <FontAwesomeIcon className="cart-icon" icon={faCartShopping} />
+              Total
+            </td>
             <td>-</td>
             <td>{totalCost.toFixed(2)}</td>
           </tr>
