@@ -3,8 +3,8 @@ import './box_menu.css';
 import './boxMenuSize_section.css';
 import './box_menuReceipt.css';
 import { KebabList } from './kebabList.jsx';
-import { PaymentForm } from './paymentForm.jsx';
-import { ReceiptTable } from './receiptTable.jsx';
+import { PaymentForm } from './payment utils/paymentForm.jsx';
+import { ReceiptTable } from './payment utils/receiptTable.jsx';
 
 // ToggleMenuComponent Component
 export function ToggleMenuComponent() {

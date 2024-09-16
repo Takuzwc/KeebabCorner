@@ -1,28 +1,29 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 import PropTypes from 'prop-types';
-import './box_menu.css';
-import './boxMenuSize_section.css';
-import { cards } from './box_menu_data.js';
-import { meatTypes } from './box_menu_data.js';
-import { sauceType } from './box_menu_data.js';
-import './box_menuReceipt.css';
+import '../.././box_menu_comp/box_menu.css';
+import '../.././box_menu_comp/boxMenuSize_section.css';
+import { cards } from '../box_menu_data.js';
+import { meatTypes } from '../box_menu_data.js';
+import { sauceType } from '../box_menu_data.js';
+import '../.././box_menu_comp/box_menuReceipt.css';
+import { costCalFunc } from './costCalcFunc.jsx';
+import axios from 'axios';
 
 // ReceiptTable Component
 export function ReceiptTable({ orders, onCheckout }) {
-  const totalCost = orders.reduce((total, order) => {
-    const handleCostSize = cards.find(e => e.name === order.size)?.cost || 0;
-
-    const handleCostMeat =
-      meatTypes.find(e => e.name === order.meat)?.cost || 0;
-
-    const handleCostSauce =
-      sauceType.find(e => e.name === order.sauce)?.cost || 0;
-
-    const orderCost =
-      order.quantity * (handleCostSize + handleCostMeat + handleCostSauce);
-    return total + orderCost;
-  }, 0);
+  const totalCost = costCalFunc({ orders });
+  function handleCheckout() {
+    axios
+      .post('http://localhost:5000/save-payment', { orders, totalCost })
+      .then(response => {
+        alert('Payment saved successfully!');
+        console.log(response.data);
+      })
+      .catch(error => {
+        alert(`Error saving payment \n ${error.message}`);
+      });
+  }
 
   // a function that takes and array of of inputs and makes calculations
   //The issue with my code is that its using only one point of storing prices for each order
@@ -52,6 +53,7 @@ export function ReceiptTable({ orders, onCheckout }) {
             const orderCost =
               order.quantity *
               (handleCostSize + handleCostMeat + handleCostSauce);
+
             return (
               <tr key={index}>
                 <td>{order.quantity}</td>
@@ -74,13 +76,13 @@ export function ReceiptTable({ orders, onCheckout }) {
           </tr>
         </tbody>
       </table>
-      <button onClick={onCheckout} className="btn-checkout">
+      <button onClick={handleCheckout} className="btn-checkout">
         CHECKOUT <FontAwesomeIcon icon={faCartShopping} />
       </button>
     </div>
   );
 }
-
+//onCheckout
 ReceiptTable.propTypes = {
   orders: PropTypes.arrayOf(
     PropTypes.shape({
