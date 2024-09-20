@@ -1,17 +1,21 @@
 const express = require('express');
 const app = express();
 const morgan = require('morgan');
+const bodyParser = require('body-parser');
+const cors = require('cors');
 
 const paymentRouter = require('./routes/paymentRouter');
-const contactrouter = require('./routes/contactRouter');
+const contactRouter = require('./routes/contactRouter');
 
 if (process.env.NODE_ENV === 'development') {
   app.use(morgan('dev'));
 }
 
 app.use(express.json());
+app.use(bodyParser.json());
+app.use(cors());
 
-app.use('/api/v1/payments', paymentRouter);
-app.use('/api/v1/contact', contactRouter);
+app.use('/api/v1/', paymentRouter);
+app.use('/api/v1/', contactRouter);
 
 module.exports = app;

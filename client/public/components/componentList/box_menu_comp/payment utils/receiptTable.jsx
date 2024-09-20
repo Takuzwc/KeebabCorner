@@ -15,7 +15,7 @@ export function ReceiptTable({ orders, onCheckout }) {
   const totalCost = costCalFunc({ orders });
   function handleCheckout() {
     axios
-      .post('http://localhost:5000/save-payment', { orders, totalCost })
+      .post('http://localhost:8000/api/v1/save-payment', { orders, totalCost })
       .then(response => {
         alert('Payment saved successfully!');
         console.log(response.data);
