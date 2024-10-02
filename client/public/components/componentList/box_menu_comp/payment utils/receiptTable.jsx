@@ -8,31 +8,15 @@ import { meatTypes } from '../box_menu_data.js';
 import { sauceType } from '../box_menu_data.js';
 import '../.././box_menu_comp/box_menuReceipt.css';
 import { costCalFunc } from './costCalcFunc.jsx';
-import axios from 'axios';
-//import { checkout } from '../../../../../../server/app.js';
-
+import React, { useState } from 'react';
+import { PaymentForm } from './paymentForm.jsx';
 // ReceiptTable Component
 export function ReceiptTable({ orders, onCheckout }) {
   const totalCost = costCalFunc({ orders });
-  function handleCheckout() {
-    axios
-      .post('http://localhost:8000/api/v1/save-payment', { orders, totalCost })
-      .then(response => {
-        alert('Payment saved successfully!');
-        console.log(response.data);
-      })
-      .catch(error => {
-        alert(`Error saving payment \n ${error.message}`);
-      });
-  }
 
-  const handleClick = () => {
+  const onPayment = () => {
     onCheckout();
-    handleCheckout();
   };
-  // a function that takes and array of of inputs and makes calculations
-  //The issue with my code is that its using only one point of storing prices for each order
-  //It should calculate prices for each order separately.
 
   return (
     <div>
@@ -81,13 +65,22 @@ export function ReceiptTable({ orders, onCheckout }) {
           </tr>
         </tbody>
       </table>
-      <button onClick={handleClick} className="btn-checkout">
+
+      {/* Only render PaymentForm if showPaymentForm is true */}
+
+      <PaymentForm
+        onPayment={onPayment}
+        orders={orders}
+        totalCost={totalCost}
+      />
+
+      {/* <button onClick={handleClick} className="btn-checkout">
         CHECKOUT <FontAwesomeIcon icon={faCartShopping} />
-      </button>
+      </button> */}
     </div>
   );
 }
-//onCheckout
+
 ReceiptTable.propTypes = {
   orders: PropTypes.arrayOf(
     PropTypes.shape({

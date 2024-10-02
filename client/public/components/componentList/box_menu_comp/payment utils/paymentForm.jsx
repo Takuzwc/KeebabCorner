@@ -5,17 +5,7 @@ import '../.././box_menu_comp/boxMenuSize_section.css';
 import '../.././box_menu_comp/box_menuReceipt.css';
 import successlogo from './../../../../images/success.png';
 
-export function PaymentForm({ onPayment }) {
-
-  constructor(props) {
-    super(props); 
-      this.state = {
-        cardName: '',
-        cardNumber: '',
-        expiryDate: '',
-        cvv: '',
-      };
-  }
+export function PaymentForm({ onPayment, orders, totalCost }) {
   const [paymentSuccess, setPaymentSuccess] = useState(false); // Track payment success state
   const [formData, setFormData] = useState({
     cardName: '',
@@ -34,7 +24,14 @@ export function PaymentForm({ onPayment }) {
   const handleSubmit = async event => {
     event.preventDefault();
     const { cardName, cardNumber, expiryDate, cvv } = formData;
-    const paymentData = { cardName, cardNumber, expiryDate, cvv };
+    const paymentData = {
+      cardName,
+      cardNumber,
+      expiryDate,
+      cvv,
+      orders, // Include receipt (orders) in the payment data
+      totalCost, // Include total cost in the payment data
+    };
 
     try {
       const response = await fetch('http://localhost:8000/api/v1/payment', {
@@ -42,7 +39,7 @@ export function PaymentForm({ onPayment }) {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(paymentData),
+        body: JSON.stringify(paymentData), // Send both payment and receipt data
       });
 
       if (response.ok) {
@@ -51,6 +48,8 @@ export function PaymentForm({ onPayment }) {
           cardNumber: '',
           expiryDate: '',
           cvv: '',
+          orders: '',
+          totalCost: '',
         });
         setPaymentSuccess(true); // Set payment success to true upon successful payment
       } else {
@@ -139,4 +138,6 @@ export function PaymentForm({ onPayment }) {
 
 PaymentForm.propTypes = {
   onPayment: PropTypes.func.isRequired,
+  orders: PropTypes.array.isRequired, // Expect orders to be passed
+  totalCost: PropTypes.number.isRequired, // Expect total cost to be passed
 };
