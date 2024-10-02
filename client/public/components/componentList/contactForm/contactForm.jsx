@@ -53,6 +53,7 @@ export class ContactForm extends Component {
       alert('Failed to submit contact information.');
     }
   };
+
   render() {
     return (
       <>
