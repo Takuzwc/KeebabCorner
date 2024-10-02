@@ -9,6 +9,7 @@ import { sauceType } from '../box_menu_data.js';
 import '../.././box_menu_comp/box_menuReceipt.css';
 import { costCalFunc } from './costCalcFunc.jsx';
 import axios from 'axios';
+//import { checkout } from '../../../../../../server/app.js';
 
 // ReceiptTable Component
 export function ReceiptTable({ orders, onCheckout }) {
@@ -25,6 +26,10 @@ export function ReceiptTable({ orders, onCheckout }) {
       });
   }
 
+  const handleClick = () => {
+    onCheckout();
+    handleCheckout();
+  };
   // a function that takes and array of of inputs and makes calculations
   //The issue with my code is that its using only one point of storing prices for each order
   //It should calculate prices for each order separately.
@@ -76,7 +81,7 @@ export function ReceiptTable({ orders, onCheckout }) {
           </tr>
         </tbody>
       </table>
-      <button onClick={handleCheckout} className="btn-checkout">
+      <button onClick={handleClick} className="btn-checkout">
         CHECKOUT <FontAwesomeIcon icon={faCartShopping} />
       </button>
     </div>
