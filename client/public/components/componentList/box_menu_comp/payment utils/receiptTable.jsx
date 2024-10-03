@@ -8,15 +8,12 @@ import { meatTypes } from '../box_menu_data.js';
 import { sauceType } from '../box_menu_data.js';
 import '../.././box_menu_comp/box_menuReceipt.css';
 import { costCalFunc } from './costCalcFunc.jsx';
-import React, { useState } from 'react';
 import { PaymentForm } from './paymentForm.jsx';
+//import React, { useState } from 'react';
+
 // ReceiptTable Component
 export function ReceiptTable({ orders, onCheckout }) {
   const totalCost = costCalFunc({ orders });
-
-  const onPayment = () => {
-    onCheckout();
-  };
 
   return (
     <div>
@@ -66,17 +63,10 @@ export function ReceiptTable({ orders, onCheckout }) {
         </tbody>
       </table>
 
-      {/* Only render PaymentForm if showPaymentForm is true */}
-
-      <PaymentForm
-        onPayment={onPayment}
-        orders={orders}
-        totalCost={totalCost}
-      />
-
-      {/* <button onClick={handleClick} className="btn-checkout">
+      <PaymentForm orders={orders} totalCost={totalCost} />
+      <button onClick={onCheckout} className="btn-checkout">
         CHECKOUT <FontAwesomeIcon icon={faCartShopping} />
-      </button> */}
+      </button>
     </div>
   );
 }

@@ -1,11 +1,12 @@
 import PropTypes from 'prop-types';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import '../.././box_menu_comp/box_menu.css';
 import '../.././box_menu_comp/boxMenuSize_section.css';
 import '../.././box_menu_comp/box_menuReceipt.css';
 import successlogo from './../../../../images/success.png';
 
-export function PaymentForm({ onPayment, orders, totalCost }) {
+//onPayment, onClick={onPayment} for button
+export function PaymentForm({ orders, totalCost }) {
   const [paymentSuccess, setPaymentSuccess] = useState(false); // Track payment success state
   const [formData, setFormData] = useState({
     cardName: '',
@@ -51,7 +52,7 @@ export function PaymentForm({ onPayment, orders, totalCost }) {
           orders: '',
           totalCost: '',
         });
-        setPaymentSuccess(true); // Set payment success to true upon successful payment
+        setPaymentSuccess(true);
       } else {
         alert('Payment failed.');
       }
@@ -126,7 +127,7 @@ export function PaymentForm({ onPayment, orders, totalCost }) {
                 />
               </label>
             </div>
-            <button type="submit" onClick={onPayment} className="btn-payment">
+            <button type="submit" className="btn-payment">
               Pay
             </button>
           </form>
@@ -137,7 +138,7 @@ export function PaymentForm({ onPayment, orders, totalCost }) {
 }
 
 PaymentForm.propTypes = {
-  onPayment: PropTypes.func.isRequired,
-  orders: PropTypes.array.isRequired, // Expect orders to be passed
-  totalCost: PropTypes.number.isRequired, // Expect total cost to be passed
+  //  onPayment: PropTypes.func.isRequired,
+  orders: PropTypes.array.isRequired,
+  totalCost: PropTypes.number.isRequired,
 };
