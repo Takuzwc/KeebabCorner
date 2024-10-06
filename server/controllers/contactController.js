@@ -5,7 +5,7 @@ exports.createContact = async (req, res) => {
   try {
     const newContact = new Contact(req.body);
     await newContact.save();
-    res.status(201).send('Contact information saved successfully!');
+    res.status(200).send('Contact information saved successfully!');
   } catch (err) {
     res.status(400).send('Error saving contact information', err);
   }
