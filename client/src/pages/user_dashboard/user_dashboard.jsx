@@ -3,7 +3,7 @@ import './user_dashboard.css';
 import { Order_main_component } from '../../../public/components/main_components/Ordering_main_component/ordering_main_component';
 import { Nav_main_component } from '../../../public/components/main_components/Nav_main_component/nav_main_component';
 import { Footer_main_component } from '../../../public/components/main_components/Footer_main_component/footer_main_component';
-import BoxMenu from '/Users/Taku/Documents/git_Workspace/keebabCorner/client/public/components/componentList/box_menu_comp/box_menu.jsx';
+import BoxMenu from '/../client/public/components/componentList/box_menu_comp/box_menu.jsx';
 
 export class User extends Component {
   render() {
