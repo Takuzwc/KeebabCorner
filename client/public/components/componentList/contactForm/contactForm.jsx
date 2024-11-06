@@ -29,13 +29,16 @@ export class ContactForm extends Component {
     const contactData = { subject, name, phone, email, message };
 
     try {
-      const response = await fetch('http://localhost:8000/api/v1/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(contactData),
-      });
+      const response = await fetch(
+        'https://keebabcorner-backend.onrender.com/api/v1/contact',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(contactData),
+        }
+      );
       if (response.ok) {
         alert('Contact information submitted successfully!');
         this.setState({

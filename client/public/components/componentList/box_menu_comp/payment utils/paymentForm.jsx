@@ -35,13 +35,16 @@ export function PaymentForm({ orders, totalCost }) {
     };
 
     try {
-      const response = await fetch('http://localhost:8000/api/v1/payment', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(paymentData), // Send both payment and receipt data
-      });
+      const response = await fetch(
+        'https://keebabcorner-backend.onrender.com/api/v1/payment',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(paymentData), // Send both payment and receipt data
+        }
+      );
 
       if (response.ok) {
         setFormData({
