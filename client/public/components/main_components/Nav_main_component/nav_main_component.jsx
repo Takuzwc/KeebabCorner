@@ -3,7 +3,7 @@ import './nav_main_component.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone } from '@fortawesome/free-solid-svg-icons';
 import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
-import Logo from '/Users/Taku/Documents/git_Workspace/KeebabCorner/client/public/images/logo.png';
+import Logo from '/../client/public/images/logo.png';
 
 export class Nav_main_component extends Component {
   render() {

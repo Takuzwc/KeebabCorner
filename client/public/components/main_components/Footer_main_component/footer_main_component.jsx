@@ -1,12 +1,12 @@
 import { Component } from 'react';
 import './footer_main_component.css';
 import { footerPagelinks } from './footer_data.js';
-import Visa from '/Users/Taku/Documents/git_Workspace/KeebabCorner/client/src/assets/images/visa.png';
-import Paypal from '/Users/Taku/Documents/git_Workspace/KeebabCorner/client/src/assets/images/paypal.png';
-import Mastercard from '/Users/Taku/Documents/git_Workspace/KeebabCorner/client/src/assets/images/mastercard.png';
-import Applepay from '/Users/Taku/Documents/git_Workspace/KeebabCorner/client/src/assets/images/applepay.png';
-import Blik from '/Users/Taku/Documents/git_Workspace/KeebabCorner/client/src/assets/images/blik.png';
-import Logo from '/Users/Taku/Documents/git_Workspace/KeebabCorner/client/src/assets/images/logo.png';
+import Visa from '/../client/src/assets/images/visa.png';
+import Paypal from '/../client/src/assets/images/paypal.png';
+import Mastercard from '/../client/src/assets/images/mastercard.png';
+import Applepay from '/../client/src/assets/images/applepay.png';
+import Blik from '/../client/src/assets/images/blik.png';
+import Logo from '/../client/src/assets/images/logo.png';
 //import FooterBack from '/Users/Taku/Documents/git_Workspace/KeebabCorner/src/assets/images/footerImage.png';
 
 export function FooterPages() {

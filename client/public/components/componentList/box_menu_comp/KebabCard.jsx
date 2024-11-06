@@ -4,7 +4,7 @@ import { faPlus, faMinus } from '@fortawesome/free-solid-svg-icons';
 import PropTypes from 'prop-types';
 import './box_menu.css';
 import './boxMenuSize_section.css';
-import Boxfood from '/Users/Taku/Documents/git_Workspace/KeebabCorner/client/src/assets/images/box_food_img.png';
+import Boxfood from '/../client/src/assets/images/box_food_img.png';
 import './box_menuReceipt.css';
 
 KebabCard.propTypes = {
